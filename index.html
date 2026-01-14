@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Audio (Google Sheets)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header>
+      <h1>YouTube Audio</h1>
+    </header>
+
+    <!-- Carátula -->
+    <div class="cover">
+      <img id="thumbnail" src="" alt="Carátula">
+      <div class="cover-overlay" id="coverOverlay">▶</div>
+    </div>
+
+    <!-- Botones desde Google Sheets -->
+    <div class="sheet-controls" id="sheetControls">
+      <p class="loading">Cargando audios…</p>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+      <button id="playBtn">▶</button>
+      <button id="pauseBtn">⏸</button>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- Volumen -->
+    <div class="volume">
+      <span>🔊</span>
+      <input type="range" id="volumeRange" min="0" max="100" value="60">
+    </div>
+
+    <!-- Player oculto -->
+    <div id="player-wrapper">
+      <div id="player"></div>
+    </div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
