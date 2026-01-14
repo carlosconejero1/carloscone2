@@ -157,3 +157,10 @@ document.getElementById("progressBar").onclick = e => {
 
 // Cargar al iniciar
 loadSheetTracks();
+function updateVideoTitle() {
+  if (!isPlayerReady) return;
+  const data = player.getVideoData();
+  if (data && data.title) {
+    document.getElementById("videoTitle").textContent = data.title;
+  }
+}
